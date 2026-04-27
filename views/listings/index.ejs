@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplatecode.ejs") %>
+
+<header>
+    </header>
+
+<main class="container">
+    <h1 class="main-title">Churches of India</h1>
+    <div class="church-grid">
+        
+        <%# Use the data passed from your express route %>
+        <% data.forEach(item => { %>
+            <% item.churches.forEach(church => { %>
+                <div class="church-card">
+                    <img src="/images/<%= church.image %>" alt="<%= church.title %>" class="church-image">
+                    <div class="card-content">
+                        <span class="state-badge"><%= item.state %></span>
+                        <h3 class="church-title"><%= church.title %></h3>
+                        <p class="church-desc"><%= church.description %></p>
+                    </div>
+                    <div class="card-footer">
+                        <span>📍 <%= church.city %></span>
+                        <span>⏰ <%= church.timing %></span>
+                    </div>
+                </div>
+            <% }) %>
+        <% }) %>
+
+    </div>
+</main>
+
+<footer>
+    <%- include('../includes/footer') %>
+    </footer>

@@ -1,0 +1,147 @@
+<% layout('layouts/boilerplate') %>
+
+<style>
+  /* Scoped styles to restore the original vision without breaking the boilerplate */
+  .terms-page-wrapper {
+    background-color: #fcfaf7; /* var(--bg) */
+    color: #1f1a17; /* var(--fg) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -100px; /* Adjust this if the hero is too far below the nav */
+  }
+
+  .hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #1a1a1a;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, #fcfaf7);
+  }
+
+  .terms-container {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    padding-bottom: 5rem;
+  }
+
+  .custom-card {
+    background: #f7f2ed; /* var(--card-bg) */
+    border: 1px solid #e6ded6; /* var(--border) */
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  .icon-box {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(204, 85, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #CC5500;
+    font-size: 1.25rem;
+  }
+
+  .text-saffron { color: #CC5500; }
+  .text-deep-green { color: #008000; }
+</style>
+
+<div class="terms-page-wrapper">
+  <section class="hero-section">
+    <img src="https://pub-1407f82391df4ab1951418d04be76914.r2.dev/uploads/595e170f-198d-4750-b1c5-9abfec97b6ef.png" class="hero-image" alt="Sacred Background">
+    <div class="hero-overlay"></div>
+    <div class="text-center position-relative" style="z-index: 10;">
+      <p class="text-uppercase fw-bold mb-2" style="color: #FFD700; letter-spacing: 2px; font-size: 0.8rem;">Legal Information</p>
+      <h1 class="display-4 fw-bold mb-2">
+        <span class="text-saffron">Ekatra</span> <span class="text-deep-green">Bharat</span>
+      </h1>
+      <h2 class="display-6 fw-semibold text-dark">Terms & Conditions</h2>
+      <p class="mt-4 opacity-75 text-dark mx-auto" style="max-width: 600px;">Welcome to Ekatra Bharat. By using this website, you agree to comply with and be bound by the following terms designed to ensure a respectful experience.</p>
+    </div>
+  </section>
+
+  <div class="terms-container px-3">
+    <p class="text-end small text-muted mb-5"><i class="bi bi-clock me-1"></i>Last updated: 1 April 2025</p>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-file-earmark-text"></i></div>
+      <h4 class="fw-bold">1. Introduction</h4>
+      <p class="text-muted"><strong>Ekatra Bharat</strong> is an informational platform dedicated to providing details about religious and spiritual destinations across India. The purpose of this website is to educate, guide, and support users in planning meaningful spiritual journeys.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-check2-circle"></i></div>
+      <h4 class="fw-bold">2. Acceptance of Terms</h4>
+      <p class="text-muted">By accessing this website, you confirm that you have read, understood, and agree to comply with all applicable laws and regulations.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-person-badge"></i></div>
+      <h4 class="fw-bold">3. Eligibility</h4>
+      <p class="text-muted">You must be at least <strong>18 years of age</strong> to use our Services independently. Users under 18 may use the Services only under legal guardian supervision.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-info-square"></i></div>
+      <h4 class="fw-bold">4. Nature of Services</h4>
+      <p class="text-muted mb-0">Ekatra Bharat provides:</p>
+      <ul class="text-muted mt-2">
+        <li>Information about religious sites and pilgrimage destinations.</li>
+        <li>Historical and cultural descriptions.</li>
+        <li>Travel-related guidance such as timings and etiquette.</li>
+      </ul>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-exclamation-triangle"></i></div>
+      <h4 class="fw-bold">5. Accuracy of Information</h4>
+      <p class="text-muted">While we strive for accuracy, site timings, rules, and dress codes may change due to local rituals or festivals. We are not liable for inconvenience caused by outdated information.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-shield-shaded"></i></div>
+      <h4 class="fw-bold">6. User Responsibilities</h4>
+      <p class="text-muted">Users must respect all religious beliefs, customs, and traditions. You agree to follow local rules and avoid actions that may hurt religious sentiments.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-patch-check"></i></div>
+      <h4 class="fw-bold">7. Intellectual Property</h4>
+      <p class="text-muted">All content, including text, graphics, and layout, is the exclusive property of Ekatra Bharat unless otherwise stated. Redistribution without permission is strictly prohibited.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-slash-circle"></i></div>
+      <h4 class="fw-bold">8. Limitation of Liability</h4>
+      <p class="text-muted">Ekatra Bharat shall not be liable for any indirect or incidental damages. We are not responsible for disruptions caused by weather, natural disasters, or government actions.</p>
+    </div>
+
+    <div class="custom-card">
+      <div class="icon-box"><i class="bi bi-lock"></i></div>
+      <h4 class="fw-bold">9. Privacy</h4>
+      <p class="text-muted">Your privacy is important. Please review our Privacy Policy to understand how we collect and safeguard your personal information.</p>
+    </div>
+  </div>
+</div>

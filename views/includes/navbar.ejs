@@ -1,0 +1,58 @@
+<header id="main-header" class="bg-surface sticky top-0 z-50 shadow-sm border-b border-outline-variant/10 navbar">
+    <nav class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+        <a href="/" class="text-2xl font-black text-primary font-headline cursor-pointer " style="display: flex;">
+            <img src="/images/cropped_logo-removebg-preview.jpg" class="nav-logo">
+            <p style="color: #178a3a;">Ekatra</p>&nbsp; <p style="color: #e75f04; opacity: 0.8;">Bharat</p>
+        </a>
+        <div class="hidden md:flex items-center gap-10 nav-links-all">
+            <a href="/"
+                class="nav-link font-headline font-bold text-lg tracking-tight transition-colors duration-300 <%= typeof view !== 'undefined' && view === 'landing' ? 'active' : '' %>">
+                Home
+            </a>
+
+            <a href="/explore/temples"
+                class="nav-link font-headline font-bold text-lg tracking-tight transition-colors duration-300 <%= typeof category !== 'undefined' ? 'active' : '' %>">
+                Explore
+            </a>
+
+            <a href="/about"
+                class="nav-link font-headline font-bold text-lg tracking-tight text-stone-600 hover:text-primary transition-colors duration-300 <%= typeof view !== 'undefined' && view === 'about' ? 'active' : '' %>">
+                About
+            </a>
+
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="relative hidden lg:block group">
+                <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-outline w-5 h-5 group-focus-within:text-primary"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input id="search-input"
+                    class="pl-12 pr-6 py-3 bg-surface-container-low rounded-full border-none focus:ring-2 focus:ring-primary-container w-80 text-sm font-medium placeholder:text-outline transition-all duration-300"
+                    placeholder="Search sacred spaces..." type="text">
+            </div>
+            <div class="flex gap-2">
+                <button
+                    class="p-3 rounded-full hover:bg-stone-100 transition-colors duration-300 text-primary profile-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button id="menu-toggle"
+            class="md:hidden p-3 rounded-full hover:bg-stone-100 transition-colors duration-300 text-primary order-last">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </nav>
+</header>
+

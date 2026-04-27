@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap');
+
+.body {
+    height: 100%;
+    background-color: red !important;
+}
+
+
+/* --- Navigation & Interaction --- */
+.nav-link {
+    position: relative;
+    padding-bottom: 8px;
+    /* Space for the underline */
+    color: #49454F !important;
+    /* Your on-surface-variant color */
+    border: none;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    ;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.nav-links-all {
+    margin-left: 7.5rem;
+}
+
+/* Target the 'active' class injected by your EJS template */
+.nav-links-all .active {
+    color: #ff9c33 !important;
+    /* Your specific Orange */
+    opacity: 1;
+}
+
+/* Default color for links that aren't active */
+.nav-link {
+    color: #57534e;
+    /* text-stone-600 equivalent */
+    text-decoration: none;
+}
+
+/* Hover state remains primary color (or your preference) */
+.nav-link:hover {
+    color: #178a3a;
+    /* Your Green primary color */
+}
+
+.navbar {
+    background-color: white !important;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    padding-right: 10px;
+    margin-top: -10px;
+}
+
+.profile-btn {
+    color: #FF9933 !important;
+}
+
+#search-input {
+    background-color: #f7f7f7;
+    padding: 12px 24px 12px 48px;
+}
+
+.f-info {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.f-info-socials i {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: #49454F;
+    transition: color 0.2s;
+}
+
+.f-info-socials i:hover {
+    color: #FF9933;
+}
+
+
+/* Footer Styles */
+/* --- Base Footer Styles --- */
+.footer {
+    background-color: #f9f9f9;
+    /* Adjust to your theme */
+    padding: 40px 20px 20px;
+    font-family: sans-serif;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: grey 0px 4px 14px;
+    margin-bottom: 130px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Left Section */
+.footer-left {
+    flex: 1 1 300px;
+    /* Grows, shrinks, and stays around 300px */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+/* Links Section */
+.footer-links {
+    display: flex;
+    flex: 2 1 500px;
+    justify-content: space-between;
+    gap: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.footer-bottom-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #888;
+}
+
+/* --- Mobile Responsiveness (Tablets & Phones) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        /* Stack sections vertically */
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-links {
+        flex: 1 1 100%;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        /* Stack the columns of links */
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        margin-top: 10px;
+    }
+
+    .footer-bottom-links a {
+        margin: 0 10px;
+    }
+}
+
+/* Custom Responsive Overrides */
+@media (max-width: 767px) {
+
+    /* Transform the links container into a mobile dropdown */
+    .nav-links-all {
+        display: none;
+        /* Hide by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        /* Sits right below the header */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        /* Matches bg-surface */
+        padding: 1.5rem 2rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        gap: 1.5rem !important;
+        z-index: 40;
+    }
+
+    /* Class to show the menu when toggled */
+    .nav-links-all.active-menu {
+        display: flex !important;
+    }
+
+    /* Adjust logo and search for mobile spacing */
+    .nav-logo {
+        height: 32px;
+    }
+}
+
+/* Ensure search bar stays hidden on very small screens if it overlaps */
+@media (max-width: 1024px) {
+    #search-input {
+        width: 180px;
+        /* Slim down search for tablets */
+    }
+}
+
+/* --- Search Bar Responsiveness Fix --- */
+
+@media (max-width: 1023px) {
+
+    /* 1. Force the search container to be visible below the 'lg' breakpoint */
+    header .hidden.lg\:block {
+        display: block !important;
+    }
+
+    /* 2. Adjust the search input width so it doesn't overflow on small screens */
+    #search-input {
+        width: 100% !important;
+        max-width: 200px;
+        /* Slimmer version for mobile/tablet */
+        padding-left: 2.75rem;
+        /* Maintain space for the icon */
+        font-size: 0.8rem;
+    }
+
+    /* 3. Hide the search bar on very small phones to prevent layout breaking */
+    /* (Optional: Remove this if you want it visible on the smallest phones) */
+    @media (max-width: 480px) {
+        #search-input {
+            width: 120px !important;
+        }
+    }
+}
+
+/* Fix for vertical alignment on mobile */
+@media (max-width: 767px) {
+    nav .flex.items-center.gap-4 {
+        gap: 0.5rem;
+        /* Tighten gap between search and profile icon */
+    }
+
+    #search-input {
+        height: 40px;
+        /* Slightly smaller height for mobile */
+    }
+}
+
+
+/* --- Logo & Title Responsiveness --- */
+
+/* 1. Ensure the logo image scales but doesn't disappear */
+.nav-logo {
+    height: 45px;
+    /* Default Desktop height */
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+/* 2. Style the title text container */
+.nav-links-all+a,
+nav a[href="/"] {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    /* Prevents "Bharat" from dropping to a second line */
+}
+
+/* 3. Responsive adjustments for Tablets (md) */
+@media (max-width: 1024px) {
+    .nav-logo {
+        height: 38px;
+    }
+
+    nav a[href="/"] p {
+        font-size: 1.25rem;
+        /* Slightly smaller text */
+    }
+}
+
+/* 4. Responsive adjustments for Mobile (sm) */
+@media (max-width: 768px) {
+    .nav-logo {
+        height: 32px;
+        margin-right: 4px;
+    }
+
+    nav a[href="/"] {
+        font-size: 1.1rem;
+        /* Compact text for small screens */
+        gap: 2px;
+        /* Reduces space between Ekatra and Bharat */
+    }
+
+    /* Hide the "&nbsp;" or extra spacing on mobile if necessary */
+    nav a[href="/"] p {
+        letter-spacing: -0.02em;
+    }
+}
+
+/* 5. Extreme Small Screens (xs) */
+@media (max-width: 380px) {
+    .nav-logo {
+        height: 28px;
+    }
+
+    /* If the screen is tiny, we reduce the font even further to fit the search bar */
+    nav a[href="/"] p {
+        font-size: 1rem;
+    }
+}
+
+
+/* --- Mobile Header Layout Restructuring --- */
+
+@media (max-width: 767px) {
+
+    /* 1. Allow the Nav container to wrap items */
+    nav.flex.justify-between {
+        flex-wrap: wrap;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    /* 2. Keep Logo and Profile/Menu on the top row */
+    nav>a[href="/"] {
+        order: 1;
+        /* Force Logo to first position */
+        flex: 1;
+        /* Let it take available space */
+    }
+
+    nav .flex.items-center.gap-4 {
+        order: 2;
+        /* Profile icon group */
+    }
+
+    #menu-toggle {
+        order: 3;
+        /* Hamburger menu last on top row */
+    }
+
+    /* 3. Move Search Bar to a new full-width row below the title */
+    header .hidden.lg\:block {
+        display: block !important;
+        /* Force visibility */
+        order: 4;
+        /* Move to bottom */
+        width: 100%;
+        /* Take full width */
+        margin-top: 15px;
+        /* Space between title and search */
+    }
+
+    #search-input {
+        width: 100% !important;
+        /* Full width for easy typing */
+        max-width: none !important;
+        height: 45px;
+        background-color: #f3f4f6;
+        /* Slightly darker to define the area */
+    }
+
+    /* Adjust the search icon position for the new width */
+    .absolute.left-4.top-1\/2 {
+        top: 50%;
+    }
+}
+
+/* --- Tablet Adjustments (Optional) --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #search-input {
+        width: 250px !important;
+    }
+}
+
+
+
+/* landing.ejs styles */
+.PL {
+    font-family: "Outfit", sans-serif;
+    opacity: 0.9;
+    color: #86818a;
+}
+
+.SL {
+    color: #ff9c33;
+}
+
+.head-des {
+    color: #49454F;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 18px;
+}
+
+/* bottom_nav.ejs styles */
+/* Custom Active Colors for Ekatra Bharat Nav */
+
+/* Temples - Orange */
+.bg-primary-container {
+    background-color: #FF8C00 !important;
+    box-shadow: 0 4px 14px rgba(255, 140, 0, 0.4);
+}
+
+/* Mosques - Green */
+.bg-secondary {
+    background-color: #008000 !important;
+    box-shadow: 0 4px 14px rgba(0, 128, 0, 0.3);
+}
+
+/* Churches - Blue */
+.bg-tertiary {
+    background-color: #35D6ED !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 255, 0.3);
+}
+
+/* Ensure the text is Poppins/Outfit as discussed earlier */
+.cat-btn {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+/* Smooth transition for the pill effect */
+.nav-item-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.cat-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    letter-spacing: 0.1em;
+
+}
+
+/* 3D Carousel Styles */
+.carousel-container {
+    perspective: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-track {
+    position: relative;
+    width: 260px;
+    height: 380px;
+    transform-style: preserve-3d;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item.center {
+    transform: translate3d(0, 0, 150px) rotateY(0deg);
+    z-index: 30;
+    filter: blur(0);
+    opacity: 1;
+}
+
+.carousel-item.left-1 {
+    transform: translate3d(-75%, 0, 0) rotateY(25deg) scale(0.85);
+    z-index: 20;
+    filter: blur(2px);
+    opacity: 0.8;
+}
+
+.carousel-item.right-1 {
+    transform: translate3d(75%, 0, 0) rotateY(-25deg) scale(0.85);
+    z-index: 20;
+    filter: blur(2px);
+    opacity: 0.8;
+}
+
+.carousel-item.left-2 {
+    transform: translate3d(-130%, 0, -150px) rotateY(40deg) scale(0.7);
+    z-index: 10;
+    filter: blur(4px);
+    opacity: 0.4;
+}
+
+.carousel-item.right-2 {
+    transform: translate3d(130%, 0, -150px) rotateY(-40deg) scale(0.7);
+    z-index: 10;
+    filter: blur(4px);
+    opacity: 0.4;
+}
+
+.carousel-item.hidden-item {
+    transform: translate3d(0, 0, -300px) scale(0.5);
+    z-index: 0;
+    filter: blur(10px);
+    opacity: 0;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Tailwind Overrides for Custom Colors */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.text-primary-dim {
+    color: var(--color-primary-dim);
+}
+
+.bg-primary-dim {
+    background-color: var(--color-primary-dim);
+}
+
+.bg-surface {
+    background-color: var(--color-surface);
+}
+
+.text-on-surface {
+    color: var(--color-on-surface);
+}
+
+.text-on-surface-variant {
+    color: var(--color-on-surface-variant);
+}
+
+.bg-primary-container {
+    background-color: var(--color-primary-container);
+}
+
+.font-headline {
+    font-family: var(--font-headline);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+
+.card-city{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.animate-pop-in {
+    animation: pop-in 0.3s ease-out forwards;
+}
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+/* --- Navigation & Blur Settings --- */
+
+/* Base transitions for navigation elements */
+header, nav, .footer, .bottom-navbar {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+}
+
+/* Hide Top Nav (Slide Up) */
+.nav-hidden {
+    transform: translateY(-100%) !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Hide Footer/Bottom Nav (Slide Down) */
+.bottom-nav-hidden {
+    transform: translateY(100%) !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Background Blur Effect */
+.blur-content {
+    filter: blur(12px);
+    transition: filter 0.4s ease;
+    pointer-events: none; /* Disables interaction with background */
+}
+/* Apply this to your navigation bars and main content */
+.blur-active {
+    filter: blur(8px);
+    transition: filter 0.3s ease;
+    pointer-events: none; /* Prevents interaction with background links */
+}
+
+/* When the modal is active, find the bottom nav and hide it */
+body.modal-active .bottom-nav-container {
+    display: none !important;
+}
+
+/* Optional: Stop the background from scrolling while modal is open */
+body.modal-active {
+    overflow: hidden;
+}
+
